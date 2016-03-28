@@ -1,0 +1,40 @@
+Homework8 answers:
+
+Question 1
+None
+
+Question 2
+n
+
+Question 3
+if self._parent is None:
+    return self
+else:
+    return self._parent.get_root()
+
+Question 4
+if self._parent is None:
+    return 0
+else:
+    return self._parent.depth() + 1
+
+Question 5
+2**n
+
+Question 6
+(2**(n+1)) - 1
+
+Question 7
+84
+
+Question 8
+-num_leaves
+-num_nodes
+
+Question 9
+[[[a], [b], c], [e], d]
+
+Question 10
+In-order traversal
+
+-Overall score 100/100

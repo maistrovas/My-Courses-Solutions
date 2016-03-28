@@ -1,0 +1,39 @@
+Homework6 answers:
+
+Question 1
+n**2
+
+Question 2
+nlog(n) comparisons
+
+Question 3
+n
+
+Question 4
+-The last element pushed onto the stack is the first element popped off of the stack.
+-The first element pushed onto the stack is the last element popped off of the stack.
+
+Question 5
+-The first element enqueued into the queue is the first element dequeued out of the queue.
+-The last element enqueued into the queue is the last element dequeued out of the queue.
+
+Question 6
+up = (row - 1) % self._grid_height
+down = (row + 1) % self._grid_height
+left = (col - 1) % self._grid_width
+right = (col + 1) % self._grid_width
+return [[up, col], [down, col], [row, left], [row, right]]
+
+Question 7
+if self.is_empty(neighbor[0], neighbor[1]):
+
+Question 8
+m, n
+
+Question 9
+77
+
+Question 10
+-Everything except rhombus form.
+
+-Overall score 100/100.

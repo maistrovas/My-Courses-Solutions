@@ -1,0 +1,37 @@
+Homework answers:
+
+Question 1
+root(a,b,c)= (−b-√b**2−4ac)/2a
+
+Question 2
+f(x)=x+10
+h(z)=3
+g(y)=2y−3
+
+Question 3
+3.5
+
+Question 4
+6
+
+Question 5
+a=4.00100
+
+Question 6
+3.1416
+
+Question 7
+2, 3
+
+Question 8
+0, 5
+
+Question 9
+start_cell = (3, 3)
+direction = (-1, -1)
+
+Question 10
+2102083     # This code worth 8 out of 10 points.
+
+
+-overall score 98/100 

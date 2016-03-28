@@ -1,0 +1,37 @@
+Homework5 answers:
+
+Question 1
+0
+
+Question 2
+100+100+...+100+100 
+(with d terms in sum)
+
+Question 3
+100*d
+
+Question 4
+2
+
+Question 5
+1000+2000+3000+...+1000n
+
+Question 6
+-------
+
+Question 7
+No, the graph does not approach a straight line.
+
+Question 8
+e**0.095d
+
+Question 9
+-------
+
+Question 10
+The cost of an upgrade in Cookie Clicker grows faster than the cost of a bribe in the greedy boss scenario.
+
+Question 11
+4232016          # Code worth 10 out of 10
+
+-Overall score 85/10

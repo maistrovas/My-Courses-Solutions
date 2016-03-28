@@ -1,0 +1,35 @@
+Homework answers:
+
+Question 1
+32
+
+Question 2
+6.25
+
+Question 3
+0.00012
+
+Question 4
+0.0003968
+
+Question 5
+('b', 'e', 'c', 'd')
+
+Question 6
+{}
+{2}
+{1,2}
+
+Question 7
+2**n
+
+Question 8
+0.00198
+
+Question 9
+m! / (n!*(m-n)!)
+
+Question 10
+0634067            # Code worth 5 out of 10
+
+-Overall score 95/100

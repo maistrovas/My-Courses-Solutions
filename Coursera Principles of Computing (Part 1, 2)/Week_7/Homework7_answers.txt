@@ -1,0 +1,37 @@
+Homework7 answers:
+
+Question 1
+28
+
+Question 2
+1/2*n*(n+1)
+
+Question 3
+n!
+
+Question 4
+f(0)=1
+f(1)=1
+f(n)=f(n−1)+f(n−2)+1
+
+Question 5
+2*n-1
+
+Question 6
+p(0)=1
+p(n)=n p(n−1)
+
+Question 7
+n!
+
+Question 8
+n
+
+Question 9
+t(1)=1
+t(n)=2 t(n2)+n
+
+Question 10
+nlog(n)
+
+-Overall score 100/100

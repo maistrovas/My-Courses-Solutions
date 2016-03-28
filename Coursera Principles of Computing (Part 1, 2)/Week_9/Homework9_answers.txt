@@ -1,0 +1,50 @@
+Homework9 answers:
+
+Question 1
+4 1 2 3
+5 9 6 7
+8 10 0 11
+12 13 14 15
+
+Question 2
+"urullddruld"
+
+Question 3
+3
+
+Question 4
+"rdlu"
+
+Question 5
+"druldruldruldrul"
+"rdlurdlu"
+
+Question 6
+8 1 2 3
+9 6 4 7
+5 0 10 11
+12 13 14 15
+
+4 1 7 2 
+8 6 9 3
+5 0 10 11
+12 13 14 15
+
+Question 7
+...
+assert my_puzzle.lower_row_invariant(i, 0)
+my_puzzle.solve_col0_tile(i)
+assert my_puzzle.lower_row_invariant(i - 1, n -1)
+...
+
+Question 8
+"lddruld"
+
+Question 9
+"ruldrdlurdluurddlur"
+
+Question 10
+"urdlurrdluldrruld"
+
+
+-Overall score 100/100

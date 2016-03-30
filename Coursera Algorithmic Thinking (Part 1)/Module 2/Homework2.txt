@@ -1,0 +1,62 @@
+Homework2
+-Overall score 77.5/100
+
+
+Question 1
+--------
+
+Question 2
+--------
+
+Question 3
+O(n2)
+
+Question 4
+f(n) is O(n2)
+
+Question 5
+f(n) is O(1)
+
+Question 6
+f(n) is O(n)
+
+Question 7
+f(n) is O(n3)
+
+Question 8
+a0+a1+a2+a3
+
+Question 9
+--------
+
+Question 10
+8, ?
+
+Question 11
+Line 5: g,i 
+Line 8: du≠∞ 
+Line 10: CC∪{W} 
+Line 11: RemainingNodes−W
+
+Question 12
+--------
+
+Question 13
+Line 5: g,i
+Line 6: CC∪{W}
+Line 7: RemainingNodes−W
+
+Question 14
+O(m+n)
+
+Question 15
+The running time of CC-Distance is asymptotically slower than that of CC-Visited due to the initialization of d in lines 2-3 of BFS-Distance.
+
+Question 16
+(A**k)[i,j]
+
+Question 17
+The length of the shortest path is the smallest non-negative integer k such that (A**k)[i,j] is non-zero.
+
+Question 18
+(A**k)[i,j]−(A^k)[i,j] where k is the length of the shortest path from node i to node j in g.

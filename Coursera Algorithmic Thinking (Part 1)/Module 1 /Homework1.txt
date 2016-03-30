@@ -1,0 +1,58 @@
+Homework1
+-Overall score 80/100
+
+
+Question 1
+0
+
+Question 2
+1
+
+Question 3
+{0 : 0.125, 1 : 0.125, 2 : 0.25, 3 : 0.375, 4 : 0.125}
+
+Question 4
+5
+
+Question 5
+0
+
+Question 6
+4
+
+Question 7
+n-1
+
+Question 8
+1/2*(n*(n-1))
+
+Question 9
+(n-1) 
+( k )
+
+Question 10
+Lower = 0 and upper = n−1
+
+Question 11
+0
+
+Question 12
+-------
+
+Question 13
+(n-1)p
+
+Question 14
+(n−1)p**k(1−p)**n−1−k
+( k )
+
+Question 15
+n**2
+
+Question 16
+n**2
+
+Question 17
+-------
+Question 18
+-------

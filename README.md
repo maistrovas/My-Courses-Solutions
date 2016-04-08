@@ -6,6 +6,8 @@ Hi everyone !!! Here is my solutions for Mini Projects of some courses that i pa
 - Coursera An Introduction to Interactive Programming in Python (Part 1, 2) from Rice University (Summer 2015).
 - Coursera Principles of Computing (Part 1, 2) from Rice University (Winter 2016).
 - Coursera Algorithmic Thinking (Part 1) from Rice University.(Winter 2016)
+- EDX MITx 6.00.1x - Introduction to Computer Science and Programming Using Python(Autumn 2015)
+- EDX MITx 6.00.2x - Introduction to Computational Thinking and Data Science (Autumn 2015)
 
 
 # Important!

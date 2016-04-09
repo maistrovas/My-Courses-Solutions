@@ -1,4 +1,4 @@
 *.pyc
 .png
 .pdf
-/Udacity_Fullstack_Nanodegree/vagrant/catalog/ignored/
+/ignored

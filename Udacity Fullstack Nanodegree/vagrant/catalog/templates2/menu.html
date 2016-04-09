@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	
+	{# Back to restaurant option #}
+	<a href="{{url_for('showRestaurants')}}" class='icons'><span class="glyphicon glyphicon-home"></span></a>
+	{# Add restaurant option #}
+	<a href="{{url_for('newMenuItem', restaurant_id=restaurant_id)}}" class='icons'><span class="glyphicon glyphicon-plus"></span></a>
+
+
+	<link rel="stylesheet" type=text/css href="{{url_for('static', filename='styles.css')}}">
+	<meta charset="UTF-8">
+	<title>Menu</title>
+<div class='header'>
+	<h1>The {{restaurant.name}} menu </h1>
+</div>	
+</head>
+<body>
+	<div class='flash'>
+	{% with messages = get_flashed_messages() %}
+	    {% if messages %}
+	        <ul>
+	        	{% for message in messages %}
+	        		<li><strong>{{message}}</strong></li>
+	        	{% endfor %}
+	    	</ul>
+	    {% endif %}
+	{% endwith %}
+	</div>
+	
+	{# <a href="{{url_for('newMenuItem', restaurant_id=restaurant_id)}}">Add new item</a> #}
+
+
+	{% if items  %}
+		{% for course in courses %}
+<div class='menuitems'>
+			<h2><em>{{course.course}}</em></h2>
+		
+			{% for item in items %}
+				{% if item.course == course.course %}
+	<div class='spec_items'>
+					<h3>{{item.name}}</h3>
+					<p>{{item.description}} <br> {{item.price}}</p>
+	</div>
+					<a href="{{url_for('editMenuItem', restaurant_id=restaurant_id, menu_id=item.id)}}"class='icons_items'><span class='glyphicon glyphicon-edit'></span></a>
+					<a href="{{url_for('deleteMenuItem', restaurant_id=restaurant_id, menu_id=item.id)}}" class='icons_items'><span class='glyphicon glyphicon-remove-circle'></span></a>
+				{% endif %}
+			{% endfor %}
+
+</div>
+		{% endfor %}  
+	{% else %}
+	    <p>You currently have no menu items. Press '+' to add new!</p>
+	{% endif %}
+</body>
+</html>

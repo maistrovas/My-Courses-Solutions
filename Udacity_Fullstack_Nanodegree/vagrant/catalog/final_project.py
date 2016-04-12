@@ -168,34 +168,42 @@ def fbconnect():
 		response.headers['Content-Type'] = 'application/json'
 		return response
 	access_token = request.data
-
+	print "access token received =  %s " % access_token
+	#print type(access_token)
+	
 	app_id = json.loads(open('fb_client_secrets.json', 'r').read())['web']['app_id']
 	app_secret = json.loads(open('fb_client_secrets.json', 'r').read())['web']['app_secret']
-	url = 'https://graph.facebook.com/oauth/access_token \
-			?grant_type=fb_exchange_token&clien_id=%s&client_secret\
-			%s&fb_exchange_token=%s' %(app_id, app_secret,access_token)
+	#print "APP_ID = ", app_id
+	#print "APP_SECRET = ", app_secret 
+	url = 'https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=%s&client_secret=%s&fb_exchange_token=%s' % (
+        app_id, app_secret, access_token)
 	h = httplib2.Http()
 	result = h.request(url, 'GET')[1]
 
 	userinfo_url = 'https://graph.facebook.com/v2.5/me'
-	token = result.split("&")[0]
-
+	#print 'All result = ', result
+	token = result.split('&')[0]
+	#print "Token=", token
 	url = 'https://graph.facebook.com/v2.5/me?%s&fields=name,id,email' % token
 	h = httplib2.Http()
-	result = h.request(url, "GET")[1]
+	result = h.request(url, 'GET')[1]
 	# print "url sent for API access:%s"% url
-    # print "API JSON result: %s" % result
+	# print "API JSON result: %s" % result
+	
+	#data = result.json()
 	data = json.loads(result)
+	login_session['access_token'] = access_token
 	login_session['provider'] = 'facebook'
 	login_session['username'] = data['name']
 	login_session['email'] = data['email']
 	login_session['facebook_id'] = data['id']
 
-	url = 'https://graph.facebook.com/v2.5/me/picture \
-	?%s&redirect=0&height=200&width=200' % token
+	url = 'https://graph.facebook.com/v2.5/me/picture?%s&redirect=0&height=200&width=200' %(token)
 	h = httplib2.Http()
 	result = h.request(url, "GET")[1]
+
 	data = json.loads(result)
+	
 	login_session['picture'] = data['data']['url']
 	# see if user exists
 	user_id = getUserID(login_session['email'])
@@ -205,7 +213,6 @@ def fbconnect():
 	output = ''
 	output += '<h1>Welcome, '
 	output += login_session['username']
-
 	output += '!</h1>'
 	output += '<img src="'
 	output += login_session['picture']
@@ -219,6 +226,7 @@ def fbconnect():
 def fbdisconnect():
 	facebook_id = login_session['facebook_id']
 	access_token = login_session['access_token']
+	#access_token = 'CAAYiv7T9CrUBANlqZBMoWfY6ztguZAhXTXM6CTAMS9LGuo9I0AtvbEFWsgx8T1kua5CCfHKHYmxKEkSgQgZBXeZBAU8tCjdCuZBzT1Q7ZAOJFPboBMEvZAjPMzrHrg44pZCiUBgFROFZAYvDjPS7B3uIFWC5cSt0Az0wZCgAOXdcyZCyXGaJLBujF8Eea9rBMpZA3gB6c6ZAr6Oo58Ij0QfmOoSEu'
 	url = 'https://graph.facebook.com/%s/permissions?access_token=%s' % (facebook_id, access_token)
 	h = httplib2.Http()
 	result = h.request(url, "DELETE")[1]

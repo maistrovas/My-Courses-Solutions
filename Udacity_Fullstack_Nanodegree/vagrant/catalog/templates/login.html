@@ -1,25 +1,56 @@
+
+{% extends "main.html" %}
 <html>
 <head>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+{% block content %}
+{# {% include "header.html" %} #}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
  			 </script>
 
 	<script src="//apis.google.com/js/platform.js?onload=start"> </script>
 		
 </head>
 <body>
-<!-- GOOGLE PLUS SIGN IN-->
-	
-    <div  id="signInButton">
-    <span class="g-signin"
-          data-scope="openid email"
-          data-clientid="65682248324-90tl2694btdats3fj18g1hjl1lusg1vm.apps.googleusercontent.com"
-          data-redirecturi="postmessage"
-          data-accesstype="offline"
-          data-cookiepolicy="single_host_origin"
-          data-callback="signInCallback"
-          data-approvalprompt="force">
-    </span>
+    
+    <div class="row top-menu" style='padding-bottom:0px !important;'>
+    <div class="col-md-6">
+      <a href="{{url_for('showRestaurants')}}">
+        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>Show All Restaurants
+      </a>
     </div>
+  </div>
+  
+  <div class="row top-menu">
+    <div class="col-md-10"></div>
+    <div class="col-md-2 text-right">
+          </div>
+  </div>
+  <div class="row divider blue">
+    <div class="col-md-12"></div>
+  </div>
+  <div class="row banner main">
+    <div class="col-md-1"></div>
+    <div class="col-md-11 padding-none">
+      <h1>Login with OAuth 2.0</h1>
+    </div>
+  </div>
+<!-- GOOGLE PLUS SIGN IN-->
+<div class='row' style='margin-top: 50px;'>
+  <div class="col-md-6 text-center">
+      <div  id="signInButton">
+      <span class="g-signin"
+            data-scope="openid email"
+            data-clientid="65682248324-90tl2694btdats3fj18g1hjl1lusg1vm.apps.googleusercontent.com"
+            data-redirecturi="postmessage"
+            data-accesstype="offline"
+            data-cookiepolicy="single_host_origin"
+            data-callback="signInCallback"
+            data-approvalprompt="force">
+      </span>
+      </div>
+    </div>
+
+
 <div id='result'></div>
 
 <script>
@@ -116,7 +147,7 @@ function signInCallback(authResult) {
     });
   }
 </script>
-
+<div class="col-md-6 text-center">
 <button>
          
 
@@ -127,8 +158,10 @@ function signInCallback(authResult) {
 
 
         </button>
+</div>
 <!--END FACEBOOK SIGN IN -->
-
+</div>
+{% endblock content %}
 
 
 </body>
